@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mgazi Corner</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #444;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            transition: background-color 0.3s ease;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #f8f9fa !important;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            background-image: url('img/pexels-minan1398-1482803.jpg');
+            height: 100vh;
+            color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero p {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.5s;
+        }
+        .hero .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            padding: 12px 36px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out 1s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .section-heading {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .section-subheading {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #888;
+        }
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+        .bg-dark {
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .parallax h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .parallax p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.5s;
+        }
+        .parallax .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            padding: 12px 36px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out 1s;
+        }
+        .card {
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .team-member img {
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #f8f9fa !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Mgazi Corner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <h1 class="display-4">Welcome to Mgazi Corner</h1>
+                    <p class="lead">Discover the taste of excellence</p>
+                    <a href="#menu" class="btn btn-primary btn-lg">Explore Our Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center mb-5">Our Menu</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/img-0.jpg" class="card-img-top" alt="Dish 1" width="300" height="250">
+                        <div class="card-body">
+                            <h5 class="card-title">Beef</h5>
+                            <p class="card-text">R75</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/img-01 (3).jpg" class="card-img-top" alt="Dish 2" width="300" height="250">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger</h5>
+                            <p class="card-text">R55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/img-01 (6).jpg" class="card-img-top" alt="Dish 3" width="300" height="250">
+                        <div class="card-body">
+                            <h5 class="card-title">Mutton</h5>
+                            <p class="card-text">R65</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="parallax" style="background-image: url('img/img-01\ \(1\).jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center text-white">
+                    <h2 class="display-4 mb-4">About Us</h2>
+                    <p class="lead mb-4">Mgazi Corner is committed to delivering unforgettable dining experiences through our passion for quality food and hospitality.</p>
+                    <a href="#testimonials" class="btn btn-primary btn-lg">Read Reviews</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-dark text-white">
+        <div class="container">
+            <h2 class="section-heading text-center mb-5">Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text" style="color:#444">"The food here is amazing! The flavors are so rich and delicious."</p>
+                            <footer class="blockquote-footer">John Doe</footer>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text" style="color:#444">"A fantastic dining experience. Highly recommend Mgazi Corner."</p>
+                            <footer class="blockquote-footer">Jane Smith</footer>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body" style="color:#444">
+                            <p class="card-text">"Great atmosphere and even better food. I'll definitely be coming back."</p>
+                            <footer class="blockquote-footer">Sam Wilson</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center mb-5">Our Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <img src="img/testimonials-01 (1).jpg" class="img-fluid mb-3" alt="Team Member 1"  width="200" height="150">
+                        <h5 class="mb-0">John Doe</h5>
+                        <p class="text-muted">Chef</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <img src="img/testimonials-01 (2).jpg" class="img-fluid mb-3" alt="Team Member 2"  width="200" height="150">
+                        <h5 class="mb-0">Samuel Biyela</h5>
+                        <p class="text-muted">Co-founder & CEO</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <img src="img/testimonials-01 (3).jpg" class="img-fluid mb-3" alt="Team Member 2" width="200" height="150">
+                        <h5 class="mb-0">Jane Mkhize</h5>
+                        <p class="text-muted">Marketing Director</p>
+                    </div>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="parallax" style="background-image: url('img/contact.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center text-white">
+                    <h2 class="display-4 mb-4">Contact Us</h2>
+                    <p class="lead mb-4">Have a question or want to book a table? Contact us now.</p>
+                    <a href="tel:+27639951341" class="btn btn-primary btn-lg mr-3"><i class="fas fa-phone"></i> Call Us</a>
+                    <a href="mailto:smesihlentshangase@gmail.com" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container text-center">
+            <p>Contact us: +27639951341 | codesteps23@gmail.com</p>
+            <p>Follow us on social media:</p>
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
